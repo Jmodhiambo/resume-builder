@@ -28,9 +28,10 @@ Follows a modular design with Blueprints for authentication and resume functiona
 1. Clone the repository:
    ```bash
    git clone https://github.com/Jmodhiambo/resume-builder.git
-   cd resume-builder
+   cd resume-builder ```
 
 ## 🔧 File Structure
+<pre><code>```bash
 
 flask_resume_builder/
 │
@@ -60,3 +61,4 @@ flask_resume_builder/
 ├── requirements.txt            # Dependencies
 ├── run.py                      # App entry point
 └── README.md                   # Project overview
+``` </code></pre>
