@@ -31,7 +31,7 @@ Follows a modular design with Blueprints for authentication and resume functiona
    cd resume-builder ```
 
 ## 🔧 File Structure
-<pre><code>```bash
+<pre><code>
 
 flask_resume_builder/
 │
@@ -61,4 +61,4 @@ flask_resume_builder/
 ├── requirements.txt            # Dependencies
 ├── run.py                      # App entry point
 └── README.md                   # Project overview
-``` </code></pre>
+</code></pre>
