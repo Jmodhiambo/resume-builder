@@ -29,3 +29,34 @@ Follows a modular design with Blueprints for authentication and resume functiona
    ```bash
    git clone https://github.com/Jmodhiambo/resume-builder.git
    cd resume-builder
+
+## 🔧 File Structure
+
+flask_resume_builder/
+│
+├── app/
+│   ├── __init__.py             # App factory setup
+│   ├── models.py               # SQLAlchemy models
+│   ├── forms.py                # Flask-WTF forms
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── auth_routes.py      # Login, register
+│   │   └── resume_routes.py    # Resume form, preview, download
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   ├── dashboard.html
+│   │   ├── resume_form.html
+│   │   └── resume_preview.html
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── resume_templates/   # For styled HTML templates
+│   └── utils/
+│       └── pdf_generator.py    # Resume PDF logic
+│
+├── config.py                   # Configuration settings
+├── requirements.txt            # Dependencies
+├── run.py                      # App entry point
+└── README.md                   # Project overview
