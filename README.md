@@ -30,10 +30,10 @@ Follows a modular design with Blueprints for authentication and resume functiona
    git clone https://github.com/Jmodhiambo/resume-builder.git
    cd resume-builder ```
 
-## 🔧 File Structure
+2. File Structure
 <pre><code>
 
-flask_resume_builder/
+resume_builder/
 │
 ├── app/
 │   ├── __init__.py             # App factory setup
