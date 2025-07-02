@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Mypy and other static analysis tools
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# PDF/resume outputs
+*.pdf
+app/static/resume_templates/*.pdf
+
+# Compiled HTML (if using resume exports)
+app/static/resume_templates/*.html
+
+# Secrets or credentials (be careful!)
+*.key
+*.pem
+
+# __init__.py files sometimes get pycache
+app/**/__pycache__/
