@@ -101,5 +101,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-Created with ❤️ by [Lincoln Mihigo](https://github.com/LinMihigo) and [Martin Odhiambo](https://github.com/Jmodhiambo)
+Created with ❤️ by [Lincoln Mihigo](https://github.com/LinMihigo) and [Martin Odhiambo](https://github.com/Jmodhiambo).
 For questions or feedback, feel free to reach out via GitHub Issues.
