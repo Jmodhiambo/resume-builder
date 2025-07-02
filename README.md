@@ -1,64 +1,105 @@
-# Flask Resume Builder 🧾
+# 🧾 Flask Resume Builder
 
-A simple and elegant web application for creating, previewing, and downloading professional resumes. Built with Python, Flask, and a clean, modular architecture.
+A clean and user-friendly web application for creating, previewing, and downloading professional resumes. Built with **Python** and **Flask**, it follows modular best practices and a clean code architecture.
+
+---
 
 ## 🚀 Features
 
-- User registration and login
-- Dynamic resume form input
-- Resume preview before download
-- PDF generation from styled HTML templates
-- Lightweight, clean UI (Bootstrap 5)
+- ✅ User registration and authentication  
+- 🧾 Dynamic resume form (Personal Info, Education, Experience, Skills, etc.)  
+- 👀 Real-time resume preview on the web  
+- 📄 Download resumes as styled PDF  
+- 📱 Fully responsive design using Bootstrap 5  
+
+---
 
 ## 📦 Tech Stack
 
-- **Backend**: Flask, Python 3
-- **Frontend**: Jinja2, HTML5, Bootstrap 5
-- **Database**: SQLite (or PostgreSQL)
-- **Forms**: Flask-WTF
-- **PDF Export**: WeasyPrint / ReportLab
-- **Auth**: Flask-Login
+| Layer         | Technology              |
+|---------------|--------------------------|
+| Backend       | Flask, Python, SQLAlchemy |
+| Frontend      | Jinja2, Bootstrap 5       |
+| Forms         | Flask-WTF, WTForms        |
+| Database      | SQLite / PostgreSQL       |
+| PDF Export    | WeasyPrint / ReportLab    |
+| Auth & Session| Flask-Login               |
+
+---
+
+## 🧭 How It Works
+
+1. User visits the home page and registers or logs in.  
+2. After login, they're redirected to the **dashboard**.  
+3. From the dashboard, users launch the **Resume Builder**:
+   - Fill in forms for Personal Info, Education, Experience, Skills, etc.
+   - Preview the resume in real-time.
+   - Click “Download as PDF” to export the resume.
+4. (Optional) Users may select from different resume templates, save sessions, or share resumes online.
+
+---
 
 ## 🏗️ Project Structure
 
-Follows a modular design with Blueprints for authentication and resume functionality. Clean separation of concerns for better maintainability and testing.
-
-## 🔧 Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Jmodhiambo/resume-builder.git
-   cd resume-builder ```
-
-2. File Structure
-<pre><code>
-
-resume_builder/
+```
+flask_resume_builder/
 │
 ├── app/
-│   ├── __init__.py             # App factory setup
-│   ├── models.py               # SQLAlchemy models
-│   ├── forms.py                # Flask-WTF forms
-│   ├── routes/
-│   │   ├── __init__.py
-│   │   ├── auth_routes.py      # Login, register
-│   │   └── resume_routes.py    # Resume form, preview, download
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── dashboard.html
-│   │   ├── resume_form.html
-│   │   └── resume_preview.html
-│   ├── static/
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── resume_templates/   # For styled HTML templates
-│   └── utils/
-│       └── pdf_generator.py    # Resume PDF logic
+│   ├── __init__.py          # App factory setup
+│   ├── models.py            # SQLAlchemy models
+│   ├── forms.py             # WTForms definitions
+│   ├── routes/              # Route blueprints
+│   ├── templates/           # Jinja2 HTML templates
+│   ├── static/              # CSS, JS, and assets
+│   └── utils/               # Helper functions
 │
-├── config.py                   # Configuration settings
-├── requirements.txt            # Dependencies
-├── run.py                      # App entry point
-└── README.md                   # Project overview
-</code></pre>
+├── config.py                # Configuration settings
+├── requirements.txt         # Project dependencies
+├── run.py                   # App entry point
+└── README.md                # Project documentation
+```
+
+---
+
+## 🧪 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/flask-resume-builder.git
+cd flask-resume-builder
+```
+
+### 2. Create a virtual environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the application
+
+```bash
+flask run
+```
+
+> ℹ️ The app will be available at `http://127.0.0.1:5000`
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact
+
+Created with ❤️ by [Lincoln Mihigo](https://github.com/LinMihigo) and [Martin Odhiambo](https://github.com/Jmodhiambo)
+For questions or feedback, feel free to reach out via GitHub Issues.
