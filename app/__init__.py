@@ -3,26 +3,30 @@
 """This sets up your app instance, config, and Blueprints."""
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_wtf import CSRFProtect
-from flask_login import LoginManager
-from .config import Config
+from app.utils import db, csrf, login_manager
+from config import Config
+from dotenv import load_dotenv
+from app.models import User
 
-db = SQLAlchemy()
-csrf = CSRFProtect()
-login_manager = LoginManager()
+load_dotenv()
 
-def create_app():
+def create_app(config_class=Config):
     """Flask App Factory"""
     app = Flask(__name__)
-    app.config.from_object(Config)
+    app.config.from_object(config_class)
 
     db.init_app(app)
     csrf.init_app(app)
     login_manager.init_app(app)
 
-    from .routes.auth_routes import auth_bp
-    from .routes.resume_routes import resume_bp
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
+    from app.routes.main import main_bp
+    from app.routes.auth_routes import auth_bp
+    from app.routes.resume_routes import resume_bp
+    app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(resume_bp)
 

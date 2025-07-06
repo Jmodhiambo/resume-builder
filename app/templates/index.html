@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 class="display-4">Welcome to the Resume Builder</h1>
+<p class="lead">Create and download professional resumes easily.</p>
+
+{% if not current_user.is_authenticated %}
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('auth.register') }}" class="btn btn-success">Create an Account</a>
+        <a href="{{ url_for('auth.login') }}" class="btn btn-outline-primary">Login</a>
+    </div>
+    <p class="mt-3 text-muted">Don't have an account? Click "Create an Account" to get started. Already registered? Click "Login".</p>
+{% else %}
+    <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">Go to Dashboard</a>
+{% endif %}
+{% endblock %}

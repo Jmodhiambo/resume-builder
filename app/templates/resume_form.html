@@ -2,9 +2,9 @@
 {% block content %}
 <div class="container mt-5">
   <h3 class="mb-4">Build Your Resume</h3>
-  <form method="POST" action="{{ url_for('resume.resume_form') }}">
+  <form method="POST" action="{{ url_for('resume.resume_edit', resume_id=resume.id) if edit else url_for('resume.resume_form') }}">
     {{ form.hidden_tag() }}
-    <div class="form-group">{{ form.name.label }} {{ form.name(class="form-control") }}</div>
+    <div class="form-group">{{ form.full_name.label }} {{ form.full_name(class="form-control") }}</div>
     <div class="form-group">{{ form.email.label }} {{ form.email(class="form-control") }}</div>
     <div class="form-group">{{ form.phone.label }} {{ form.phone(class="form-control") }}</div>
     <div class="form-group">{{ form.summary.label }} {{ form.summary(class="form-control", rows="3") }}</div>

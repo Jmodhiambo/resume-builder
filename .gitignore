@@ -7,6 +7,7 @@ __pycache__/
 venv/
 ENV/
 env/
+.env
 .venv/
 
 # Mypy and other static analysis tools
@@ -27,3 +28,7 @@ app/static/resume_templates/*.html
 
 # __init__.py files sometimes get pycache
 app/**/__pycache__/
+
+
+# Generated pdfs
+generated_pdfs/
