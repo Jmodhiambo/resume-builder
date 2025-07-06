@@ -82,9 +82,6 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 
-# Generate a secret to store as SECRET_KEY in your .env file
-python -c "import secrets; print(secrets.token_hex(32))"
-
 # Setup postgresql
 # populate .env with the following
 PG_USER=admin
@@ -92,8 +89,8 @@ PG_PASS=random-password
 PG_DB=resume_db
 PG_HOST=localhost
 
-# Make sure pg_setup.sh is executable
-./pg_setup.sh
+# Make sure setup.sh is executable
+./setup.sh
 # Check for outputs for any errors.
 ```
 

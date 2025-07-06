@@ -7,3 +7,4 @@ Flask-SQLAlchemy
 email-validator
 WeasyPrint
 python-dotenv
+psycopg2-binary
