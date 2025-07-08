@@ -42,7 +42,7 @@ A clean and user-friendly web application for creating, previewing, and download
 ## 🏗️ Project Structure
 
 ```
-flask_resume_builder/
+resume_builder/
 │
 ├── app/
 │   ├── __init__.py          # App factory setup
@@ -66,7 +66,7 @@ flask_resume_builder/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/resume-builder.git
+git clone https://github.com/Jmodhiambo/resume-builder.git
 cd resume-builder
 ```
 
