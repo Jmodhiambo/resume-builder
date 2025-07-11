@@ -1,20 +1,20 @@
-# 🧾 Flask Resume Builder
+# Flask Resume Builder
 
 A clean and user-friendly web application for creating, previewing, and downloading professional resumes. Built with **Python** and **Flask**, it follows modular best practices and a clean code architecture.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ User registration and authentication  
-- 🧾 Dynamic resume form (Personal Info, Education, Experience, Skills, etc.)  
-- 👀 Real-time resume preview on the web  
-- 📄 Download resumes as styled PDF  
-- 📱 Fully responsive design using Bootstrap 5  
+- User registration and authentication  
+- Dynamic resume form (Personal Info, Education, Experience, Skills, etc.)  
+- Real-time resume preview on the web  
+- Download resumes as styled PDF  
+- Fully responsive design using Bootstrap 5  
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 | Layer         | Technology              |
 |---------------|--------------------------|
@@ -27,7 +27,7 @@ A clean and user-friendly web application for creating, previewing, and download
 
 ---
 
-## 🧭 How It Works
+## How It Works
 
 1. User visits the home page and registers or logs in.  
 2. After login, they're redirected to the **dashboard**.  
@@ -39,7 +39,7 @@ A clean and user-friendly web application for creating, previewing, and download
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 resume_builder/
@@ -61,7 +61,7 @@ resume_builder/
 
 ---
 
-## 🧪 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -81,18 +81,20 @@ source venv/bin/activate
 
 ```bash
 pip install -r requirements.txt
-
-# Setup postgresql
-# populate .env with the following
+```
+Populate .env with the following
+```bash
 PG_USER=admin
 PG_PASS=random-password
 PG_DB=resume_db
 PG_HOST=localhost
-
-# Make sure setup.sh is executable
-./setup.sh
-# Check for outputs for any errors.
 ```
+Setup Postgressql with setup.sh. Make sure the file is executable
+```bash
+./setup.sh
+```
+Check for outputs for any errors.
+
 
 ### 4. Run the application
 
@@ -100,17 +102,17 @@ PG_HOST=localhost
 flask run
 ```
 
-> ℹ️ The app will be available at `http://127.0.0.1:5000`
+The app will be available at `http://127.0.0.1:5000`
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📬 Contact
+## Contact
 
 Created with by [Lincoln Mihigo](https://github.com/LinMihigo) and [Martin Odhiambo](https://github.com/Jmodhiambo).
-For questions or feedback, feel free to reach out via GitHub Issues.
+For questions or feedback, feel free to reach out.
