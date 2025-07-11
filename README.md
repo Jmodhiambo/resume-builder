@@ -21,8 +21,8 @@ A clean and user-friendly web application for creating, previewing, and download
 | Backend       | Flask, Python, SQLAlchemy |
 | Frontend      | Jinja2, Bootstrap 5       |
 | Forms         | Flask-WTF, WTForms        |
-| Database      | SQLite / PostgreSQL       |
-| PDF Export    | WeasyPrint / ReportLab    |
+| Database      | PostgreSQL                |
+| PDF Export    | WeasyPrint                |
 | Auth & Session| Flask-Login               |
 
 ---
@@ -112,5 +112,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-Created with ❤️ by [Lincoln Mihigo](https://github.com/LinMihigo) and [Martin Odhiambo](https://github.com/Jmodhiambo).
+Created with by [Lincoln Mihigo](https://github.com/LinMihigo) and [Martin Odhiambo](https://github.com/Jmodhiambo).
 For questions or feedback, feel free to reach out via GitHub Issues.
