@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+  <h3 class="mb-4">Build Your Resume</h3>
+  <form method="POST" action="{{ url_for('resume.resume_edit', resume_id=resume.id) if edit else url_for('resume.resume_form') }}">
+    {{ form.hidden_tag() }}
+    <div class="form-group">{{ form.full_name.label }} {{ form.full_name(class="form-control") }}</div>
+    <div class="form-group">{{ form.email.label }} {{ form.email(class="form-control") }}</div>
+    <div class="form-group">{{ form.phone.label }} {{ form.phone(class="form-control") }}</div>
+    <div class="form-group">{{ form.summary.label }} {{ form.summary(class="form-control", rows="3") }}</div>
+
+    <hr />
+    <h5>Education</h5>
+    {% for edu_form in form.education %}
+      <div class="border p-3 mb-2">
+        {{ edu_form.institution.label }} {{ edu_form.institution(class="form-control") }}
+        {{ edu_form.degree.label }} {{ edu_form.degree(class="form-control") }}
+        {{ edu_form.year.label }} {{ edu_form.year(class="form-control") }}
+      </div>
+    {% endfor %}
+
+    <hr />
+    <h5>Experience</h5>
+    {% for exp_form in form.experience %}
+      <div class="border p-3 mb-2">
+        {{ exp_form.company.label }} {{ exp_form.company(class="form-control") }}
+        {{ exp_form.role.label }} {{ exp_form.role(class="form-control") }}
+        {{ exp_form.duration.label }} {{ exp_form.duration(class="form-control") }}
+      </div>
+    {% endfor %}
+
+    <hr />
+    <h5>Skills</h5>
+    {{ form.skills.label }} {{ form.skills(class="form-control") }}
+
+    <div class="mt-4">
+      {{ form.submit(class="btn btn-primary w-100") }}
+    </div>
+  </form>
+</div>
+{% endblock %}
